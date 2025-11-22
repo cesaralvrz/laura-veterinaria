@@ -1,3 +1,5 @@
+import lauraPhoto from '../../../assets/images/laura.jpeg';
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
@@ -6,8 +8,8 @@ export default function About() {
           <div className="relative">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://readdy.ai/api/search-image?query=professional-female-dog-trainer-with-multiple-happy-dogs-outdoor-park-setting-warm-natural-lighting-friendly-approachable-expert-caring-compassionate-professional-photography&width=600&height=700&seq=about-trainer&orientation=portrait"
-                alt="Sarah Mitchell - Professional Dog Trainer"
+                src={lauraPhoto}
+                alt="Laura Quintero - Professional Dog Trainer"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -22,7 +24,7 @@ export default function About() {
             <div className="w-20 h-1 bg-[#f2bac9] mb-8"></div>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Hola, soy <strong className="text-[#1e3a5f]">Sarah Mitchell</strong>, entrenadora certificada de perros con más de 15 años de experiencia ayudando a familias a construir relaciones más fuertes y felices con sus compañeros caninos.
+              Hola, soy <strong className="text-[#1e3a5f]">Laura Quintero</strong>, entrenadora certificada de perros con más de 15 años de experiencia ayudando a familias a construir relaciones más fuertes y felices con sus compañeros caninos.
             </p>
 
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">

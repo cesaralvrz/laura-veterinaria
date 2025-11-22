@@ -4,7 +4,7 @@ const reviews = [
     location: 'Seattle, WA',
     rating: 5,
     image: 'https://readdy.ai/api/search-image?query=Happy%20professional%20woman%20in%20her%2040s%20with%20warm%20smile%20holding%20a%20golden%20retriever%20dog%20outdoors%20in%20a%20park%20setting%2C%20natural%20daylight%2C%20candid%20photography%20style%2C%20joyful%20expression%2C%20simple%20natural%20background&width=120&height=120&seq=review-person-001&orientation=squarish',
-    text: 'Sarah completely transformed our rescue dog, Luna. She came to us with severe anxiety and fear-based aggression. After just 8 weeks of training, Luna is now a confident, happy dog who loves meeting new people and other dogs. Sarah\'s patience and expertise are truly remarkable. I can\'t recommend her enough!'
+    text: 'Laura completely transformed our rescue dog, Luna. She came to us with severe anxiety and fear-based aggression. After just 8 weeks of training, Luna is now a confident, happy dog who loves meeting new people and other dogs. Sarah\'s patience and expertise are truly remarkable. I can\'t recommend her enough!'
   },
   {
     name: 'Michael Rodriguez',

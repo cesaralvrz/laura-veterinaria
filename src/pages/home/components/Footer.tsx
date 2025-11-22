@@ -13,7 +13,7 @@ export default function Footer() {
                 <i className="ri-footprint-fill text-3xl text-[#f2bac9]"></i>
               </div>
               <span className="text-2xl font-bold" style={{ fontFamily: '"Pacifico", serif' }}>
-                DogCare
+                Laura Quintero
               </span>
             </div>
             <p className="text-white/80 leading-relaxed">
@@ -127,15 +127,7 @@ export default function Footer() {
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-white/60">
-            © 2024 DogCare. Todos los derechos reservados. |{' '}
-            <a
-              href="https://readdy.ai/?origin=logo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-[#f2bac9] transition-colors whitespace-nowrap"
-            >
-              Powered by Readdy
-            </a>
+            © {new Date().getFullYear()} Laura Quintero. Todos los derechos reservados.
           </p>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +15,6 @@ export default function Navbar() {
   }, []);
 
   const navItems = [
-    { name: 'Inicio', to: 'home' },
     { name: 'Sobre Mí', to: 'about' },
     { name: 'Servicios', to: 'services' },
     { name: 'Reseñas', to: 'reviews' },
@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'
+        scrolled || isMenuOpen ? 'bg-white shadow-lg py-4' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 lg:px-12">
@@ -40,7 +40,7 @@ export default function Navbar() {
               <i className="ri-footprint-fill text-3xl text-[#f2bac9] group-hover:text-[#bad7f2] transition-colors"></i>
             </div>
             <span className="text-2xl font-bold text-[#1e3a5f]" style={{ fontFamily: '"Pacifico", serif' }}>
-              DogCare
+              Laura Quintero
             </span>
           </Link>
 
@@ -72,10 +72,45 @@ export default function Navbar() {
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden w-10 h-10 flex items-center justify-center text-[#1e3a5f]">
-            <i className="ri-menu-line text-2xl"></i>
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden w-10 h-10 flex items-center justify-center text-[#1e3a5f]"
+            aria-label="Toggle menu"
+          >
+            <i className={isMenuOpen ? 'ri-close-line text-2xl' : 'ri-menu-line text-2xl'}></i>
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200 bg-white rounded-lg shadow-md">
+            <div className="flex flex-col gap-4 pt-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  smooth={true}
+                  duration={800}
+                  spy={true}
+                  activeClass="text-[#f2bac9]"
+                  className="text-[#1e3a5f] hover:text-[#f2bac9] font-medium cursor-pointer transition-colors px-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <Link
+                to="cta"
+                smooth={true}
+                duration={800}
+                className="bg-[#f2bac9] hover:bg-[#bad7f2] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 cursor-pointer text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contactar
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
